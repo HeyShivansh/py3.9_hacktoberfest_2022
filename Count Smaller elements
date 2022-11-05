@@ -1,0 +1,19 @@
+class Solution {
+    int[] constructLowerArray(int[] arr, int n) 
+    {
+        int temp=0,count;
+        int [] b=new int[n];
+        for(int i=0;i<n;i++)
+        {
+          temp=arr[i];
+          count=0;
+          for(int j=i;j<n;j++)
+          {
+              if(temp>arr[j])
+                count++;
+          }
+          b[i]=count;
+        }
+        return b;
+    }
+}
